@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+  <title>03-Array Find e Array Find Index</title>
+</head>
+<body>
+
+</body>
+<script>
+  const data = [
+    {
+      nome: 'Allan',
+      age: 26,
+      city: 'Jundiaí'
+    },
+    {
+      nome: 'Goku',
+      age: 40,
+      city: 'Sei la'
+    }
+  ];
+
+  // const sampleArray = [4, -5, 0, -1];
+
+  // //find trás o resultado da condição.
+  // const underZero = sampleArray.find(x => x < 0);
+
+  // //find index trás o index do resultado da condição.
+  // const underZeroIndex = sampleArray.findIndex(x => x < 0);
+
+  // console.log(underZero);
+  // console.log(underZeroIndex);
+
+  const allan = data.find(pessoa => pessoa.nome === 'Allan');
+
+  console.log(allan);
+
+</script>
+</html>
