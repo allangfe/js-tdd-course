@@ -1,0 +1,40 @@
+</DOCTYPE html>
+<html>
+<head>
+  <title>02-arrow_function_and_lexical_this</title>
+</head>
+<body>
+    <button id = "btn">Click Me!</button>
+</body>
+<script>
+
+//this é o objeto que estamos interagindo dentro do contexto.
+//Se eu usar array function no exemplo 1, ele pega todo o contexto e não apenas o btn.
+
+//Exemplo 1 - Pegar dados do evento do btn usando function
+    // const btn = document.getElementById('btn');
+    // btn.addEventListener('click', function() {
+    //     console.log(this);
+    // });
+
+// Exemplo 2 - Pegar dados de função prepare do objeto usando Array Function (() =>) mesmo o this estando em uma função dentro da função.
+    const sandwich = {
+        bread: 'white',
+        cheese: 'cheddar',
+
+        prepare: function() {
+            return `I want a sandwich with ${this.bread} bread and ${this.cheese}`
+        },
+
+        make: function(){
+            window.setTimeout(() => {
+                console.log(this.prepare());
+            }, 500);
+        }
+    };
+
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function(){ sandwich.make() });
+</script>
+</html>

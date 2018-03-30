@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>03-template_liberal_para_html_fragments</title>
+</head>
+<meta charset="utf-8">
+<body>
+</body>
+<script>
+  const article = {
+      title: 'Aprendendo Template String',
+      intro: 'Uma breve explicação de como utilizar template string do ES6 em seu código hoje.',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      tags: ['es6', 'js', 'tamplate-liberal'],
+  };
+
+  function renderAuthor(nome){
+    return (nome) ? nome : 'unknown';
+  }
+
+
+  const markup = `
+    <article>
+      <head>
+        <h1>${article.title}</h1>
+      </head>
+      <section>
+        <p>${article.intro}</p>
+      </section>
+      <footer>
+        <ul>
+          ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+        </ul>
+        <p>Author: ${renderAuthor(article.author)}</p>
+      </footer>
+    </article>
+  `
+  document.body.innerHTML = markup;
+</script>
+</html>

@@ -1,0 +1,32 @@
+</DOCTYPE html>
+<html>
+<head>
+  <title>Teste</title>
+</head>
+<body>
+
+</body>
+<script>
+  const ireland = ['Dublin', 'Galway', 'Cork']
+
+  const love = ireland.map(function(x){
+    return `I love ${x}!`;
+  });
+
+  const loveArrow = ireland.map((name) => {
+    return `I love ${name}!`;
+  });
+
+  const loveArrowSingle = ireland.map(name => {
+    return `I love ${name}!`;
+  });
+
+  const loveArrowOneLine = ireland.map(name => `I love ${name}!`);
+
+  const loveChain = ireland
+                      .filter(name => name === 'Dublin')
+                      .map(name => `I love ${name}!`);
+
+  console.log(loveArrow);
+</script>
+</html>
