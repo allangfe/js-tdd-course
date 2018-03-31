@@ -1,0 +1,19 @@
+</DOCTYPE html>
+<html>
+<head>
+  <title>02 Spread Dentro da Função</title>
+</head>
+<body>
+
+</body>
+<script>
+  function makeSandwich(bread, cheese, sauce){
+    console.log(`Seu sanduiche com ${bread}, ${cheese} e ${sauce} está pronto!`);
+  }
+
+  const ingredients = ['white', 'cheddar', 'barbecue'];
+
+  makeSandwich(...ingredients); //colocar parametros em uma função com Spread (desmembrar)
+
+</script>
+</html>

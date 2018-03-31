@@ -1,0 +1,28 @@
+</DOCTYPE html>
+<html>
+<head>
+  <title>01 Introdução Spread Operators </title>
+</head>
+<body>
+
+</body>
+<script>
+  let front = ['react', 'vue', 'angular'];
+  let back = ['python', 'ruby', 'nodejs'];
+
+  // console.log(...'allan');
+  // console.log([...'allan']); //desmembra transformando a string em um array
+  // console.log(...front);
+
+  // let fullStack = front.concat(back); //concatenar dois arrays.
+
+  // let fullStack = [];
+  // fullStack = fullStack.concat(front);
+  // fullStack.push('RxJs');
+  // fullStack = fullStack.concat(back); //Concatena arrays e inclui mais um front.
+
+  let fullStack = [...front, 'RxJS' ,...back] //Concatena arrays e inclui mais um front.(com Spread Operators)
+  console.log(fullStack);
+
+</script>
+</html>

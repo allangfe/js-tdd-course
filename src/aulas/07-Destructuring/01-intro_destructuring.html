@@ -1,0 +1,43 @@
+</DOCTYPE html>
+<html>
+<head>
+  <title>01 Introdução Destructuring</title>
+</head>
+<body>
+
+</body>
+<script>
+  var data = {
+    name: 'Allan',
+    surname: 'Gonçalves',
+    age: '26',
+    email: 'allan.allan@email.com',
+    social:{
+      twitter: '@allan_gfe',
+      facebook: '/allan_gf'
+    }
+  };
+
+  // const name = data.name;
+  // const twitter = data.social.twitter;
+  // const facebook = data.soc.facebook;
+
+  // console.log(name);
+  // console.log(twitter);
+  // console.log(facebook);
+
+  const {name, surname} = data;
+  console.log(name);
+  console.log(surname);
+
+  const {twitter, facebook} = data.social;
+  console.log(twitter);
+  console.log(facebook);
+
+  const {facebook: fb} = data.social;
+  console.log(fb);
+
+  const {city = 'Jundiaí'} = data;
+  console.log(city);
+</script>
+</html>
