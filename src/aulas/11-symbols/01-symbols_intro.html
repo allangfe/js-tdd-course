@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>01 - Symbols Intro</title>
+</head>
+<body>
+
+</body>
+<script>
+    //string, array, symbol -- tipos primitivos.
+    // symbol é imutavel e único.
+
+    let foo = Symbol('name');
+    let bar = Symbol('name');
+
+    // console.log(foo === bar); //false
+
+    let obj = {
+        [Symbol('name')]: 'Allan',
+        [Symbol('age')]: '26',
+        city: 'Jundiaí'
+    };
+
+    // console.log(Object.keys(obj)); -- Mostrar as keys normais do objeto
+
+    const symbols = Object.getOwnPropertySymbols(obj); //Pega as keys symbols do objeto.
+    const data = symbols.map(sym => obj[sym]);
+
+    console.log(symbols);
+    console.log(data);
+</script>
+</html>
