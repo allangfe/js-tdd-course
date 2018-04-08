@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+  <title>01 - Introdução a Generator</title>
+</head>
+<body>
+
+</body>
+<script>
+    function* GenNames(){
+        yield 'Allan';
+        yield 'Goku';
+        yield 'Luffy';
+    }
+
+    const names = GenNames();
+
+    console.log(names.next());
+    console.log(names.next());
+    console.log(names.next());
+    console.log(names.next());
+</script>
+</html>

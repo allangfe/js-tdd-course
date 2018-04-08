@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>02 - For...Of</title>
+</head>
+<body>
+
+</body>
+<script>
+    //iterable
+    //iterator
+
+    var txt = 'Brasil' //iterable
+    var it = txt[Symbol.iterator](); //iterator
+
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+    // console.log(it.next());
+
+    for(letra of it){
+        console.log(letra);
+
+        if(letra === 's') break; //pode capturar o momento que queira parar o looping.
+    }
+</script>
+</html>
