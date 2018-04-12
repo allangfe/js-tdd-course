@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>01 - Introdução Proxy</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mySet = new Set(['Allan', 'Goku', 'Luffy']);
+
+    mySet.add('Teste');
+    mySet.add('Allan');
+    mySet.delete('Goku');
+
+    console.log(mySet.has('Goku'));
+    console.log(mySet.has('Luffy'));
+
+    let it = mySet.values();
+    // console.log(it.next());
+    // console.log(it.next());
+
+    for(name of it){
+        console.log(name);
+    }
+
+</script>
+</html>
