@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>02 - Introdução a WeakSet</title>
+</head>
+<body>
+
+</body>
+<script>
+    //WeakSet é similar ao Set, porém com pequenas regras e metodos diferentes. Não permite Interação(Interator).
+
+    let obj1 = {
+        name: 'Allan',
+        age: 26
+    };
+
+    let obj2 = {
+        name: 'Goku',
+        age: 40
+    };
+
+    let ws = new WeakSet([obj1, obj2]); //Só funciona com objetos, não funciona com tipos primitivos.
+</script>
+</html>
