@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <title>02 - WeakMaps Intro</title>
+</head>
+<body>
+
+</body>
+<script>
+     let obj1 = {
+        name: 'Allan',
+        age: 26
+    };
+
+    let obj2 = {
+        name: 'Goku',
+        age: 40
+    };
+
+    let vm = new WeakMap();
+
+    vm.set(obj1, 'Info Allan');
+    vm.set(obj2, 'Info Goku');
+
+    //O WeakMap e WeakSet apesar de terem menos metodos para ser utilizado, possuem a vantagem de quando determinarmos null para o objeto, toda a referencia do objeto somem, economizando assim, memoria.
+</script>
+</html>
