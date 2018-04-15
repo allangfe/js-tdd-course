@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>02-async await error handler</title>
+</head>
+<body>
+
+</body>
+<script>
+    // async function getUsers(){
+    //     const allan = fetch('https://api.github.com/users/allangfe').then(x => x.json());
+    //     const willian = fetch('https://api.github.com/users/willianjusten').then(x => x.json());
+
+    //     const promises = await Promise.all([allan, willian]);
+    //     console.log(promises);
+    // }
+
+    // getUsers();
+
+    async function getUsers(users){
+        const promises = users.map(user => fetch(`https://api.github.com/users/${user}`));
+
+        const people = await Promise.all(promises); //Trás de uma vez todas as promisses resolvidas.
+        console.log(people.map(x => x.url));
+    }
+
+    getUsers(['allangfe', 'willianjusten'])
+</script>
+</html>
