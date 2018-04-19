@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <title>05 Object Values</title>
+</head>
+<body>
+
+</body>
+<script>
+    const animals = {
+        camel: 3,
+        llama: 2,
+        alpaca: 5
+    };
+
+    console.log("Total of animals:", Object.values(animals).reduce((a, b) => a + b));
+
+    // console.log(Object.entries(animals)); // permite retornar uma array com a chave e valor.
+
+    // const animalsMap = new Map(Object.entries(animals));
+    // console.log(animalsMap);
+    // console.log(animalsMap.size);
+    // console.log(animalsMap.has('llama'));
+    // console.log(animalsMap.has('lion'));
+    // console.log(animalsMap.get('alpaca'));
+</script>
+</html>
