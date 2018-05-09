@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*js",
     "prepush": "npm run lint",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js"
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --watch"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,8 @@
     "eslint-plugin-react": "^7.6.1",
     "husky": "^0.15.0-rc.8",
     "mocha": "^5.1.1"
+  },
+  "dependencies": {
+    "chai": "^4.1.2"
   }
 }
